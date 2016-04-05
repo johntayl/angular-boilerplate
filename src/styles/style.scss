@@ -8,6 +8,7 @@ Angular App Styles.
 
 //Global
 @import "global/base";
+@import "global/typography";
 
 //Partials
 @import "partials/header";
@@ -15,3 +16,6 @@ Angular App Styles.
 
 //Templates
 @import "templates/home";
+@import "templates/users-list";
+@import "templates/users-details";
+@import "templates/users-form";

@@ -35,22 +35,22 @@ function( $stateProvider, $urlRouterProvider ) {
         .state('app.users.list', {
             url: '',
             templateUrl: 'views/users/list.html',
-            controller: 'UserListCtrl'
+            controller: 'UsersListCtrl'
         })
         .state('app.users.create', {
             url: '/create',
             templateUrl: 'views/users/create.html',
-            controller: 'UserCreateCtrl'
+            controller: 'UsersCreateCtrl'
         })
         .state('app.users.details', {
             url: '/:userId',
             templateUrl: 'views/users/details.html',
-            controller: 'UserDetailCtrl'
+            controller: 'UsersDetailsCtrl'
         })
         .state('app.users.edit', {
             url: '/edit/:userId',
             templateUrl: 'views/users/edit.html',
-            controller: 'UserEditCtrl'
+            controller: 'UsersEditCtrl'
         });
 
     $urlRouterProvider.when('', '/');

@@ -1,0 +1,9 @@
+.content.users-list
+
+    h1 Users List
+    
+    ul
+        li.user-item(ng-repeat="user in users track by $index")
+            a(ui-sref="app.users.details({ userId: $index })")
+                img(ng-src="{{user.avatar}}")
+                h3 {{user.name}}
