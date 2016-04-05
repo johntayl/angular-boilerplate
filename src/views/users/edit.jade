@@ -1,0 +1,16 @@
+.content.users-form
+    
+    h1 Edit {{::user.name}}
+    
+    hr
+    
+    form(ng-submit="submitForm()")
+        
+        div
+            input(type="text" ng-model="user.name" placeholder="Name")
+        div
+            input(type="text" ng-model="user.avatar" placeholder="Avatar URL")
+        div
+            input(type="text" ng-model="user.bio" placeholder="About this user...")
+        div
+            input(type="submit" value="Create")
