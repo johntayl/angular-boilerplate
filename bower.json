@@ -1,0 +1,25 @@
+{
+  "name": "angular-boilerplate",
+  "version": "1.0.0",
+  "authors": [
+    "John Taylor <johntaylor@bsideapp.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "www/lib",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.5.0",
+    "angular-resource": "~1.5.0",
+    "angular-bootstrap": "~1.2.4",
+    "angular-ui-router": "~0.2.18",
+    "bourbon": "~4.2.6",
+    "neat": "~1.7.4",
+    "jquery": "~2.2.1"
+  }
+}

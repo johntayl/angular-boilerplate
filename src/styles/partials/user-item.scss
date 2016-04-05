@@ -1,0 +1,16 @@
+.user-item {
+    position: relative;
+    padding-left: 130px;
+    min-height: 130px;
+    img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        border-radius: 50%;
+    }
+
+    h3 {
+        display: inline-block;
+        margin: 55px 0px 0px 20px;
+    }
+}
