@@ -1,7 +1,7 @@
 /**
  * Users Details Controller
  */
-window.angular.module('users.controllers.users_details', [])
+window.angular.module('users.controllers.details', [])
 .controller('UsersDetailsCtrl', [
 '$scope',
 '$state',

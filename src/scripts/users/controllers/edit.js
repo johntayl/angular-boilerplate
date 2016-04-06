@@ -1,7 +1,7 @@
 /**
  * Users Edit Controller
  */
-window.angular.module('users.controllers.users_edit', [])
+window.angular.module('users.controllers.edit', [])
 .controller('UsersEditCtrl', [
 '$scope',
 '$state',

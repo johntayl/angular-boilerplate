@@ -4,7 +4,7 @@
 
 //Removing tomcat unsupported headers
 window.app.config(['$httpProvider',
-function( $httpProvider, Configuration ) {
+function( $httpProvider ) {
     //delete $httpProvider.defaults.headers.common['X-Requested-With'];
     angular.noop();
 }]);
