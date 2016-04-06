@@ -1,11 +1,9 @@
-.content.users-details
-    a(ui-sref="app.users.list") &lt; Back
+.users-details
     
-    div.text-center
-        img(ng-src="{{user.avatar}}")
+    img(ng-src="{{user.avatar}}")
         
-        h2 {{user.name}}
+    h2 {{user.name}}
         
-        p {{user.bio}}
+    p {{user.bio}}
         
-        button(ui-sref="app.users.edit") Edit
+    button(ui-sref="app.users.edit({userId: user.id})") Edit

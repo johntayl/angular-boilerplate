@@ -1,7 +1,7 @@
 /**
  * Users Create Controller
  */
-window.angular.module('users.controllers.users_create', [])
+window.angular.module('users.controllers.create', [])
 .controller('UsersCreateCtrl', [
 '$scope',
 '$state',

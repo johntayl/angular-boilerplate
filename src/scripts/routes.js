@@ -30,7 +30,7 @@ function( $stateProvider, $urlRouterProvider ) {
     .state('app.users', {
         abstract: true,
         url: '/users',
-        template: '<div ui-view></div>'
+        templateUrl: 'views/users/abstract.html'
     })
         .state('app.users.list', {
             url: '',

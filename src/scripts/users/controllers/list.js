@@ -1,7 +1,7 @@
 /**
  * Users List Controller
  */
-window.angular.module('users.controllers.users_list', [])
+window.angular.module('users.controllers.list', [])
 .controller('UsersListCtrl', [
 '$scope',
 'UsersService',

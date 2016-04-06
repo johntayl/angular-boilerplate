@@ -1,12 +1,6 @@
-.content.users-list
+.users-list
 
-    
-    p.float-right
-        a(ui-sref="app.users.create") + Add User
-        
-    h1 Users List
-    
-    hr
+    h3 List
     
     ul
         li.user-item(ng-repeat="user in users track by $index")

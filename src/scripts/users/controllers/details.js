@@ -1,7 +1,7 @@
 /**
  * Users Details Controller
  */
-window.angular.module('users.controllers.users_details', [])
+window.angular.module('users.controllers.details', [])
 .controller('UsersDetailsCtrl', [
 '$scope',
 '$state',
@@ -9,5 +9,6 @@ window.angular.module('users.controllers.users_details', [])
 function( $scope, $state, UsersService ) {
 
     $scope.user = UsersService.users[$state.params.userId];
+    $scope.user.id = $state.params.userId;
 
 }]);

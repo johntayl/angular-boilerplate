@@ -1,6 +1,156 @@
 .content
 
-    h1 Home Page
+    h1 Angular Crash Course
     
-    p This is the home page of the app. Check out a 
-        a(ui-sref="app.users.list") users list.
+    p The Young Astronauts use AngularJS in many of our projects, from SPAs to mobile apps.
+    p This project is built with this structure and  will take you through some of our methods.
+    
+    ol
+        li 
+            a(href="/#!/#1.0") Getting Started
+        li
+            a(href="/#!/#2.0") Angular Structure
+            ol
+                li
+                    a(href="/#!/#2.1") Modules
+                li
+                    a(href="/#!/#2.2") Routes
+                li
+                    a(href="/#!/#2.3") Configuration
+                li
+                    a(href="/#!/#2.4") Run
+    
+        li
+            a(href="/#!/#3.0") Sample App
+    
+    hr
+    
+    h2(id="1.0") 1.0 Getting Started
+    
+    p All public static files exist under the 
+        code /src
+        |  directory. This is our app. 
+        | This folder contains images, fonts, styles, templates and scripts.
+    
+    p Using NPM, Bower and Gulp we are able to build our project. All compiled files
+        | will be placed in the 
+        code /build
+        |  directory.
+    
+    p Common files and generated folders are ignored from GIT, so building will always be out of your commit history.
+    
+    hr
+    h2(id="2.0") 2.0 Angular Structure
+
+    p The app lives in the 
+        code /src/scripts
+        |  directory.
+        
+    
+    h3(id="2.1") 2.1 Modules
+
+    p Modules are the core concepts of Angular which can be injected into multiple parts of the app.
+    
+    p Within our 
+        code /src/scripts
+        |  directory we created module folders.
+        
+    p These modules follow a standard directory structure.
+    
+    pre /user
+        |    /controllers
+        |        list.js
+        |    /directives
+        |        user-item.js
+        |    /filters
+        |        user-filter.js
+        |    /services
+        |        users.js
+        |    index.js
+    
+    p Modules are namespaced based on the module folder structure.
+    
+    pre
+        | // user/controllers/list.js
+        | window.angular.module('user.controllers.list', [])
+    
+    p These modules are packaged together within the 
+        code index.js
+        |  file of the module. 
+    
+    pre
+        | // user/index.js
+        | window.angular.module('user', [
+        |     'user.services.users',
+        |     'user.controllers.list',
+        |     'user.filters.user_filter',
+        |     'user.directives.user_item',
+        | ]);
+
+    p Once your module is complete, you can now add it to the Angular app dependencies.
+        | This app dependency list exists in 
+        code scripts/app.js
+        
+    p Modules are organized by their origin in this file. A simple structure would be:
+    
+    pre
+        | window.app = angular.module('MyApp', [
+        |     //Angular modules
+        |     'ngResource',
+        | 
+        |     //3rd party modules
+        |     'ui.router',
+        |     'ui.bootstrap',
+        | 
+        |     //MyApp modules
+        |     'user',
+        | ]);
+        
+    h3(id="2.2") 2.2 Routes
+    
+    p Routes are handled by Angular Bootstrap UI Router. Routes, also referred to as States, can be nested to provide more complex views.
+    
+    p All app routes live in the 
+        code scripts/routes.js
+        |  file. An example of a nested state structure that uses an abstract as a base state looks like:
+    
+    pre
+        | .state('app.user', {
+        |     abstract: true,
+        |     url: '/users',
+        |     templateUrl: 'views/user/abstract.html'
+        | })
+        |     .state('app.user.list', {
+        |         url: '',
+        |         templateUrl: 'views/user/list.html',
+        |         controller: 'UserListCtrl'
+        |     })
+        |     .state('app.user.create', {
+        |         url: '/create',
+        |         templateUrl: 'views/user/create.html',
+        |         controller: 'UserCreateCtrl'
+        |     })
+        
+
+    h3(id="2.3") 2.3 Configuration
+    
+    p When including third-party modules, they will sometimes have the option to set values through configuration.
+
+    p Any of these third-party configurations can be set within the 
+        code scripts/config.js
+        |  file.
+    
+    h3(id="2.4") 2.4 Run
+    
+    p If you want to add any logic after the app has been bootstrapped, you can add it to the 
+        code scripts/run.js
+        |  file.
+
+    p This is a great place for initializing any app wide events or prefetching data from a service.
+
+    hr
+    
+    h2(id="3.0") 3.0 Sample App
+    
+    p This project comes with a module to play around with. 
+        a(href="/#!/users") User App

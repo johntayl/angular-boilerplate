@@ -9,7 +9,7 @@ window.app = angular.module('AngularApp', [
     'ui.router',
     'ui.bootstrap',
 
-    //Wantfolio Modules
+    //Angular App dependencies
     'templates',
     'users',
     'home',
